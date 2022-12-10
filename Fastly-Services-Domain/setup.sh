@@ -1,0 +1,1 @@
+python3 ../get_type_configuration.py
