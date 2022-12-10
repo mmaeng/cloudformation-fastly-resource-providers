@@ -15,7 +15,6 @@ phases:
       - echo "Loading nvm" && [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" && nvm install 14 && nvm install-latest-npm
       - npm --version
       - node --version
-      - jq --version
       - pwd
       - ls
 
@@ -26,7 +25,7 @@ phases:
       - cd $RESOURCE_PATH
       - TYPE_NAME=$(cat .rpdk-config | jq -r .typeName)
       - echo "TYPE_NAME is $TYPE_NAME"
-      - ./setup.sh
+      - test -x ./setup.sh && ./setup.sh
       - cfn validate
       - cfn generate
       - npm install && npm run build
@@ -36,7 +35,7 @@ phases:
       - cfn test -- -o log_cli=False -o log_cli_level=WARN -o console_output_style=count
     finally:
       - cat rpdk.log
-      - ./cleanup.sh
+      - test -x ./cleanup.sh && ./cleanup.sh
 artifacts:
   files:
     - $BUILD_FILE_NAME 
