@@ -33,8 +33,7 @@ phases:
       - cfn submit --dry-run
       - nohup sam local start-lambda &
       - sleep 10
-      # - cfn test --region $AWS_REGION -- -o log_cli=False -o log_cli_level=WARN -o console_output_style=count
-      - cfn test --region $AWS_REGION -- -o log_cli_level=WARN -o console_output_style=count
+      - cfn test --region $AWS_REGION -- -o log_cli=False -o log_cli_level=WARN -o console_output_style=count
     finally:
       - cat rpdk.log
       - test -x ./cleanup.sh && ./cleanup.sh

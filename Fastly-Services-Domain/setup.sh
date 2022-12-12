@@ -18,4 +18,5 @@ cat example-inputs/inputs_1_create.json | sed "s/<FASTLY_SERVICE_ID>/${FASTLY_SE
 cp example-inputs/inputs_1_invalid.json inputs/
 #cat test/integ.yml | sed "s/TEST_TAG/$(uuidgen)/" > test/integ-unique.yml
 
-python3 ../get_type_configuration.py
+# python3 ../get_type_configuration.py
+echo $TYPE_CONFIG > ~/.cfn-cli/typeConfiguration.json
