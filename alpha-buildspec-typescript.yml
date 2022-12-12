@@ -27,7 +27,6 @@ phases:
       - TYPE_NAME=$(cat .rpdk-config | jq -r .typeName)
       - echo "TYPE_NAME is $TYPE_NAME"
       - test -x ./setup.sh && ./setup.sh
-      - cat "./inputs/inputs_1_create.json"
       - cfn validate
       - cfn generate
       - npm install && npm run build
