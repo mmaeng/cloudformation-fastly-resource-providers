@@ -19,4 +19,5 @@ cp example-inputs/inputs_1_invalid.json inputs/
 #cat test/integ.yml | sed "s/TEST_TAG/$(uuidgen)/" > test/integ-unique.yml
 
 # python3 ../get_type_configuration.py
+mkdir -p ~/.cfn-cli
 echo $TYPE_CONFIG > ~/.cfn-cli/typeConfiguration.json
