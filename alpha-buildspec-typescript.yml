@@ -31,7 +31,7 @@ phases:
       - cfn generate
       - npm install && npm run build
       - cfn submit --dry-run
-      - nohup sam local start-lambda > /dev/null 2>&1 &
+      - nohup sam local start-lambda --log-file sam_output.log &
       - sleep 10
       - cfn test --region $AWS_REGION -- -o log_cli=True -o log_cli_level=WARN -o console_output_style=count
     finally:
