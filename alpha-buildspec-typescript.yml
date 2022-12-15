@@ -35,7 +35,7 @@ phases:
       - cfn submit --dry-run
       - nohup sam local start-lambda --log-file sam_output.log &>/dev/null &
       - sleep 10
-      - cfn test --region $AWS_REGION -- -o log_cli=True -o log_cli_level=WARN -o console_output_style=count || cat sam_output.log
+      - cfn test --region $AWS_REGION -- -o log_cli=True -o log_cli_level=WARN -o console_output_style=count || cat sam_output.log && exit 1
     finally:
       - cat rpdk.log
       - if test -e ./test/setup.yml; then aws cloudformation delete-stack --stack-name $SETUP_STACK_NAME; fi
