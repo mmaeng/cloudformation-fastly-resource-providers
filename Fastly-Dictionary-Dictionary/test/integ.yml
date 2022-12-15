@@ -3,6 +3,6 @@ Resources:
   TestFastlyDictionary:
     Type: Fastly::Dictionary::Dictionary
     Properties:
-        Name: CEPInteg
+        Name: <RANDOM_DICTIONARY>
         ServiceId: <FASTLY_SERVICE_ID>
         VersionId: <FASTLY_VERSION_ID>
