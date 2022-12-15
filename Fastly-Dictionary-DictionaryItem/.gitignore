@@ -18,3 +18,4 @@ coverage/
 sam-tests/
 inputs/
 test/integ-unique.yml
+test/setup.yml
