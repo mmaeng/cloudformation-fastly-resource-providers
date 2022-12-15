@@ -4,5 +4,5 @@
   "AccessKey": "<AWS_ACCESS_KEY>",
   "SecretKey": "<AWS_SECRET_KEY>",
   "Name": "<RANDOM_NAME>",
-  "BucketName": "<RANDOM_BUCKET_NAME>"
+  "BucketName": "<BUCKET_NAME>"
 }

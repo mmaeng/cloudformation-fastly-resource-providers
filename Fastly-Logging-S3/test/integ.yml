@@ -1,4 +1,6 @@
 Resources:
+  FastlyLoggingS3Bucket:
+    Type: AWS::S3::Bucket
   MySampleProject:
     Type: Fastly::Logging::S3
     Properties:
@@ -7,4 +9,4 @@ Resources:
       Name: <RANDOM_NAME>
       AccessKey: <AWS_ACCESS_KEY>
       SecretKey: <AWS_SECRET_KEY>
-      BucketName: <RANDOM_BUCKET_NAME>
+      BucketName: !Ref FastlyLoggingS3Bucket
