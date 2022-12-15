@@ -28,6 +28,9 @@ phases:
       - test -x ./setup.sh && ./setup.sh
       - cfn validate
       - cfn generate
+      - test -e ./test/setup.yml && SETUP_STACK_NAME="setup-$(echo $ENTRY_PATH | sed s/_/-/g)"
+      - test -e ./test/setup.yml && aws cloudformation create-stack --stack-name $SETUP_STACK_NAME --template-body file://test/setup.yml
+      - test -e ./test/setup.yml && aws cloudformation wait stack-create-complete --stack-name $SETUP_STACK_NAME
       - npm install && npm run build
       - cfn submit --dry-run
       - nohup sam local start-lambda --log-file sam_output.log &>/dev/null &
@@ -35,6 +38,7 @@ phases:
       - cfn test --region $AWS_REGION -- -o log_cli=True -o log_cli_level=WARN -o console_output_style=count || cat sam_output.log
     finally:
       - cat rpdk.log
+      - test -e ./test/setup.yml && aws cloudformation delete-stack --stack-name $SETUP_STACK_NAME
       - test -x ./cleanup.sh && ./cleanup.sh
 artifacts:
   files:

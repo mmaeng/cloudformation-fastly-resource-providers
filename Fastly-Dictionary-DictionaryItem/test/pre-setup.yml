@@ -3,6 +3,12 @@ Resources:
   TestFastlyDictionary:
     Type: Fastly::Dictionary::Dictionary
     Properties:
-        Name: <RANDOM_DICTIONARY>
+        Name: UnitTestDictionary
         ServiceId: <FASTLY_SERVICE_ID>
         VersionId: <FASTLY_VERSION_ID>
+
+Outputs:
+  DictionaryId:
+    Value: !GetAtt TestFastlyDictionary.Id
+    Export: 
+      Name: DictionaryIdExport

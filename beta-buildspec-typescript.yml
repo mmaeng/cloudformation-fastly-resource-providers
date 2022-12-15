@@ -36,7 +36,6 @@ phases:
     finally:
       - cat rpdk.log
       - aws cloudformation delete-stack --stack-name $INTEG_STACK_NAME
-      - aws cloudformation deregister-type --type-name $TYPE_NAME --type RESOURCE
       - test -x ./cleanup.sh && ./cleanup.sh
 artifacts:
   files:
