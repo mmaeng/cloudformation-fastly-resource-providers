@@ -165,7 +165,6 @@
     ],
     "primaryIdentifier": [
         "/properties/ServiceId",
-        "/properties/VersionId",
         "/properties/Name"
     ],
     "readOnlyProperties": [

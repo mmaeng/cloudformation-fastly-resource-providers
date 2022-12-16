@@ -33,7 +33,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
         "<a href="#serversideencryption" title="ServerSideEncryption">ServerSideEncryption</a>" : <i>String</i>,
         "<a href="#serversideencryptionkmskeyid" title="ServerSideEncryptionKmsKeyId">ServerSideEncryptionKmsKeyId</a>" : <i>String</i>,
         "<a href="#serviceid" title="ServiceId">ServiceId</a>" : <i>String</i>,
-        "<a href="#versionid" title="VersionId">VersionId</a>" : <i>String</i>
+        "<a href="#versionid" title="VersionId">VersionId</a>" : <i>String</i>,
     }
 }
 </pre>
@@ -316,4 +316,8 @@ Date and time in ISO 8601 format. Read-only.
 #### UpdatedAt
 
 Date and time in ISO 8601 format. Read-only.
+
+#### Version
+
+Integer identifying a domain version. Read-only.
 
