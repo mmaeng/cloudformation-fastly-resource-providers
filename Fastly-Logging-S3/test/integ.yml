@@ -1,12 +1,10 @@
 Resources:
-  FastlyLoggingS3Bucket:
-    Type: AWS::S3::Bucket
   MySampleProject:
     Type: Fastly::Logging::S3
     Properties:
       ServiceId: <FASTLY_SERVICE_ID>
       VersionId: <FASTLY_VERSION_ID>
       Name: <RANDOM_NAME>
-      AccessKey: <AWS_ACCESS_KEY>
-      SecretKey: <AWS_SECRET_KEY>
-      BucketName: !Ref FastlyLoggingS3Bucket
+      AccessKey: AKIAIOSFODNN7EXAMPLE
+      SecretKey: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+      BucketName: FastlyLoggingS3Bucket

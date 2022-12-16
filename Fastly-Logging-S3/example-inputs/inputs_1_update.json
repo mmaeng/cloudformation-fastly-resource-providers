@@ -1,8 +1,8 @@
 {
   "ServiceId": "<FASTLY_SERVICE_ID>",
   "Version": "<FASTLY_VERSION_ID>",
-  "AccessKey": "<AWS_ACCESS_KEY>",
-  "SecretKey": "<AWS_SECRET_KEY>",
+  "AccessKey": "AKIAIOSFODNN7EXAMPLE",
+  "SecretKey": "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY",
   "Name": "<RANDOM_NAME>",
-  "BucketName": "{{FastlyLoggingS3TestBucket}}"
+  "BucketName": "new-MyFastlyLogS3Bucket"
 }
