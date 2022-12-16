@@ -1,4 +1,6 @@
 {
+  "Name": "INVALID_NAME",
   "ServiceId": "INVALID_SERVICE",
-  "VersionId": "INVALID_VERSION"
+  "VersionId": "INVALID_VERSION",
+  "BucketName": "INVALID BUCKETNAME"
 }
