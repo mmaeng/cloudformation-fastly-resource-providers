@@ -150,8 +150,8 @@
             "type": "string",
             "format": "date-time"
         },
-        "Version": {
-            "description": "Integer identifying a backend version. Read-only.",
+        "VersionId": {
+            "description": "Alphanumeric string identifying the service version.",
             "type": "string"
         }
     },
@@ -161,7 +161,7 @@
     ],
     "primaryIdentifier": [
         "/properties/ServiceId",
-        "/properties/Version",
+        "/properties/VersionId",
         "/properties/Name"
     ],
     "readOnlyProperties": [
@@ -171,7 +171,7 @@
     ],
     "createOnlyProperties": [
         "/properties/ServiceId",
-        "/properties/Version",
+        "/properties/VersionId",
         "/properties/Name"
     ],
     "handlers": {

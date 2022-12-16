@@ -7,4 +7,3 @@ Resources:
       Name: <RANDOM_NAME>
       Token: MySplunkToken
       Url: "https://mysplunkhost:8088/services/collector/event/1.0"
-      

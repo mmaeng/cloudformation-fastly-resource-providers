@@ -46,7 +46,7 @@ class Resource extends AbstractFastlyResource<ResourceModel, LogAwsS3, LogAwsS3,
         this.setAuthenticationAndTypeConfiguration(typeConfiguration);
         const response: ResponseWithHttpInfo<LogAwsS3> = await new Fastly.LoggingS3Api().createLogAwsS3WithHttpInfo({
             service_id: model.serviceId,
-            version_id: model.version,
+            version_id: model.versionId,
             ...Transformer.for(model.toJSON())
                 .transformKeys(CaseTransformer.PASCAL_TO_SNAKE)
                 .transform()
@@ -57,7 +57,7 @@ class Resource extends AbstractFastlyResource<ResourceModel, LogAwsS3, LogAwsS3,
     async update(model: ResourceModel, typeConfiguration?: TypeConfigurationModel): Promise<LogAwsS3> {
         this.setAuthenticationAndTypeConfiguration(typeConfiguration)
         const response: ResponseWithHttpInfo<LogAwsS3> = await new Fastly.LoggingS3Api().updateLogAwsS3WithHttpInfo({
-            version_id: model.version,
+            version_id: model.versionId,
             service_id: model.serviceId,
             logging_s3_name: model.name,
             ...Transformer.for(model.toJSON())

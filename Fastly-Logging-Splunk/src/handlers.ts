@@ -46,7 +46,7 @@ class Resource extends AbstractFastlyResource<ResourceModel, LoggingSplunk, Logg
         this.setAuthenticationAndTypeConfiguration(typeConfiguration);
         const response: ResponseWithHttpInfo<LoggingSplunk> = await new Fastly.LoggingSplunkApi().createLogSplunkWithHttpInfo({
             service_id: model.serviceId,
-            version_id: model.version,
+            version_id: model.versionId,
             ...Transformer.for(model.toJSON())
                 .transformKeys(CaseTransformer.PASCAL_TO_SNAKE)
                 .transform()
@@ -57,7 +57,7 @@ class Resource extends AbstractFastlyResource<ResourceModel, LoggingSplunk, Logg
     async update(model: ResourceModel, typeConfiguration?: TypeConfigurationModel): Promise<LoggingSplunk> {
         this.setAuthenticationAndTypeConfiguration(typeConfiguration)
         const response: ResponseWithHttpInfo<LoggingSplunk> = await new Fastly.LoggingSplunkApi().updateLogSplunkWithHttpInfo({
-            version_id: model.version,
+            version_id: model.versionId,
             service_id: model.serviceId,
             logging_splunk_name: model.name,
             ...Transformer.for(model.toJSON())
