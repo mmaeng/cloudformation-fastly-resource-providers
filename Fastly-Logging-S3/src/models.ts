@@ -11,7 +11,7 @@ export class ResourceModel extends BaseModel {
     @Exclude()
     protected readonly IDENTIFIER_KEY_SERVICEID: string = '/properties/ServiceId';
     @Exclude()
-    protected readonly IDENTIFIER_KEY_VERSION: string = '/properties/Version';
+    protected readonly IDENTIFIER_KEY_VERSIONID: string = '/properties/VersionId';
     @Exclude()
     protected readonly IDENTIFIER_KEY_NAME: string = '/properties/Name';
 
@@ -231,15 +231,15 @@ export class ResourceModel extends BaseModel {
         }
     )
     updatedAt?: Optional<string>;
-    @Expose({ name: 'Version' })
+    @Expose({ name: 'VersionId' })
     @Transform(
         (value: any, obj: any) =>
-            transformValue(String, 'version', value, obj, []),
+            transformValue(String, 'versionId', value, obj, []),
         {
             toClassOnly: true,
         }
     )
-    version?: Optional<string>;
+    versionId?: Optional<string>;
 
     @Exclude()
     public getPrimaryIdentifier(): Dict {
@@ -248,8 +248,8 @@ export class ResourceModel extends BaseModel {
             identifier[this.IDENTIFIER_KEY_SERVICEID] = this.serviceId;
         }
 
-        if (this.version != null) {
-            identifier[this.IDENTIFIER_KEY_VERSION] = this.version;
+        if (this.versionId != null) {
+            identifier[this.IDENTIFIER_KEY_VERSIONID] = this.versionId;
         }
 
         if (this.name != null) {
