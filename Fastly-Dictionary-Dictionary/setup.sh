@@ -13,7 +13,7 @@
 
 mkdir -p inputs
 
-RANDOM_DICTIONARY=$(uuidgen | sed 's/[-]//g')
+RANDOM_DICTIONARY=a$(uuidgen | sed 's/[-]//g')
 
 cat example-inputs/inputs_1_create.json | sed "s/<RANDOM_DICTIONARY>/${RANDOM_DICTIONARY}/g" | sed "s/<FASTLY_SERVICE_ID>/${FASTLY_SERVICE_ID}/g" | sed "s/<FASTLY_VERSION_ID>/${FASTLY_VERSION_ID}/g" > inputs/inputs_1_create.json
 cat example-inputs/inputs_1_update.json | sed "s/<RANDOM_DICTIONARY>/${RANDOM_DICTIONARY}/g" | sed "s/<FASTLY_SERVICE_ID>/${FASTLY_SERVICE_ID}/g" | sed "s/<FASTLY_VERSION_ID>/${FASTLY_VERSION_ID}/g" > inputs/inputs_1_update.json
