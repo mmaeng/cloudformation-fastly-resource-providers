@@ -1,0 +1,5 @@
+
+Resources:
+  TestFastlyService:
+    Type: Fastly::Services::Service
+        Name: <RANDOM_NAME>

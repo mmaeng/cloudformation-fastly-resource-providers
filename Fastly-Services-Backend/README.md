@@ -1,4 +1,4 @@
-# Fastly::Dictionary::DictionaryItem
+# Fastly::Services::Backend
 
 This resource type manages a [Fastly Service Backend][3]
 

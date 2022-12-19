@@ -1,13 +1,11 @@
 {
-  "ServiceId": "<FASTLY_SERVICE_ID>",
-  "VersionId": "<FASTLY_VERSION_ID>",
+  "ServiceId": "JoBCYBkGhzR0l5DJBdys66",
+  "VersionId": "1",
   "Name": "Test healthcheck",
-  "Comment": "This is a comment [UPDATE]",
-  "CheckInterval": <FASTLY_VERSION_ID>000,
+  "CheckInterval": 60000,
   "Host": "aws.amazon.com",
-  "Initial": 9,
-  "Path": "cloudformation",
-  "Threshold": 7,
+  "Initial": 1,
+  "Threshold": 1,
   "Timeout": 5000,
   "Window": 10
 }
