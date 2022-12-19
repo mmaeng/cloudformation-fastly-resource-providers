@@ -2,4 +2,5 @@
 Resources:
   TestFastlyService:
     Type: Fastly::Services::Service
-        Name: <RANDOM_NAME>
+    Properties:
+      Name: <RANDOM_NAME>
