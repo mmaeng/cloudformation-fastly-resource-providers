@@ -17,7 +17,9 @@
         "Token"
       ],
       "additionalProperties": false
-    },
+    }
+  },
+  "properties": {
     "ServiceId": {
       "description": "Alphanumeric string identifying the service.",
       "type": "string"
@@ -115,65 +117,6 @@
     "required": [
       "FastlyAccess"
     ]
-  },
-  "properties": {
-    "CheckInterval": {
-      "$ref": "#/definitions/CheckInterval"
-    },
-    "Comment": {
-      "$ref": "#/definitions/Comment"
-    },
-    "ExpectedResponse": {
-      "$ref": "#/definitions/ExpectedResponse"
-    },
-    "Host": {
-      "$ref": "#/definitions/Host"
-    },
-    "HttpVersion": {
-      "$ref": "#/definitions/HttpVersion"
-    },
-    "Initial": {
-      "$ref": "#/definitions/Initial"
-    },
-    "Method": {
-      "$ref": "#/definitions/Method"
-    },
-    "Name": {
-      "$ref": "#/definitions/Name"
-    },
-    "Path": {
-      "$ref": "#/definitions/Path"
-    },
-    "Threshold": {
-      "$ref": "#/definitions/Threshold"
-    },
-    "Timeout": {
-      "$ref": "#/definitions/Timeout"
-    },
-    "Window": {
-      "$ref": "#/definitions/Window"
-    },
-    "ServiceId": {
-      "$ref": "#/definitions/ServiceId"
-    },
-    "VersionId": {
-      "$ref": "#/definitions/VersionId"
-    },
-    "HealthcheckName": {
-      "$ref": "#/definitions/Name"
-    },
-    "Version": {
-      "$ref": "#/definitions/Version"
-    },
-    "CreatedAt": {
-      "$ref": "#/definitions/CreatedAt"
-    },
-    "UpdatedAt": {
-      "$ref": "#/definitions/UpdatedAt"
-    },
-    "DeletedAt": {
-      "$ref": "#/definitions/DeletedAt"
-    }
   },
   "additionalProperties": false,
   "tagging": {
