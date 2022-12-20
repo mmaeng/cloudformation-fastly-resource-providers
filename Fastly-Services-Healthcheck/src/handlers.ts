@@ -8,10 +8,6 @@ import * as Fastly from "fastly";
 import {version} from '../package.json';
 
 type Healthcheck = {
-    healthcheck: number,
-    timeout: number,
-    initial: number,
-    threshold: number,
     version: number
 } & FastlyApiObject;
 
